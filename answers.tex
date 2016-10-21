@@ -13,4 +13,70 @@
 \begin{document}
 	\maketitle
 	
+	\section*{1. HTTP Protocol Version 1.1}
+		\subsection*{a)}
+			Request-Line = Method SP Request-URI SP HTTP-Version CRLF \\
+			SP: separating character \\
+			CRLF: new line in character encoding \\
+		
+		\subsection*{b)}
+			entered in the URL bar: 192.168.1.1:8080 \\
+			request line : \\
+			\hspace*{5mm}GET / HTTP/1.1 $\backslash r \backslash n$\\
+			\hspace*{5mm}Host: 192.168.1.1:8080 $\backslash r \backslash n$\\
+			\hspace*{5mm}Connection: close $\backslash r \backslash n \backslash r \backslash n$\\
+		
+		\subsection*{c)}
+			TODO \\
+		
+	
+	\section*{2. Network I/O}
+		\subsection*{a)}
+			TODO \\
+		
+		\subsection*{b)}
+			TODO \\
+		
+		
+	\section*{3. Representational State Transfer}
+		\subsection*{a)}
+			false: REST is no protocol
+		\subsection*{b)}
+			false: all stateless means, the server doesn't store client-context
+		\subsection*{c)}
+			TODO
+		\subsection*{d)}
+			true
+		
+	
+	\section*{4. WS-* services}
+		\subsection*{a)}
+			The wsdl file holds the information. It can be retrieved by opening the following URL: \\
+			http://vslab.inf.ethz.ch:8080/SunSPOTWebServices/SunSPOTWebservice?wsdl \\
+			
+			
+		\subsection*{b)}
+			the type definitions are in the schema location file \\
+			$<$xs:element name="getSpot" type="tns:getSpot"$/>$ \\
+			$<$xs:element name="getSpotResponse" type="tns:getSpotResponse"$/>$\\
+			
+		\subsection*{c)}
+			The transport protocol is defined in the binding-block of the WSDL file \\
+			The soap:address would be in a mailto URL scheme. (e.g. mailto:SunSpotWebservices@vslab.inf.ethz.ch)\\
+			
+		
+	\section*{5. Android Emulator Networking}
+		\subsection*{a)}
+			It is the IP address of the development machine. \\
+			It is always the same, because all web traffic is routed through the development machine. \\ 
+			
+		\subsection*{b)}
+			It refers to itself (localhost). \\
+			
+		\subsection*{c)}
+			10.0.2.2 \\
+			
+		\subsection*{d)}
+			TODO \\
+	
 \end{document}
