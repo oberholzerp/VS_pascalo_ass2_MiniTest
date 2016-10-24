@@ -5,7 +5,7 @@
 \usepackage{amssymb}
 \usepackage{makeidx}
 \usepackage{graphicx}
-\usepackage[left=1.00cm, right=1.00cm, top=1.00cm, bottom=1.00cm]{geometry}
+\usepackage[left=2.50cm, right=2.50cm, top=2.50cm, bottom=2.50cm]{geometry}
 
 \title{Answers MiniTest}
 \author{Joel Busch, Jakob Meier, Pascal Oberholzer}
@@ -27,26 +27,30 @@
 			\hspace*{5mm}Connection: close $\backslash r \backslash n \backslash r \backslash n$\\
 		
 		\subsection*{c)}
-			TODO \\
+			self-descriptive messages: using the HTTP methods and URI\\
+			cachability: by using the Cache-Control header fields\\
 		
 	
 	\section*{2. Network I/O}
 		\subsection*{a)}
-			TODO \\
+			Sockets: A Socket is bound to a remote host and a port. The connection to the host is created in the background.\\
+			Server-Sockets: A Server-Socket is bound to an address of a local interface and a port. Then .accept is called and the call to the accept blocks until a connection to a client is established. Once a connection is established the call to accept returns a socket which represents the connection to a client.\\
 		
 		\subsection*{b)}
-			TODO \\
+			When we call certain methods on a Stream it might not be able to handle them immediately because it has to wait for an event (I/O) to occur. Therefore it can block (i.e. paused execution) for indefinite time.\\
+			InputStream: read\\
+			OutputStream: flush, write (in case the buffer is full)\\
 		
 		
 	\section*{3. Representational State Transfer}
 		\subsection*{a)}
 			false: REST is no protocol
 		\subsection*{b)}
-			false: all stateless means, the server doesn't store client-context
+			false: All stateless means, the server doesn't store client-context.
 		\subsection*{c)}
-			TODO
+			Even though they can correspond in practice it's not that strict. Therefore as we understand the statement it is to strong.
 		\subsection*{d)}
-			true
+			It's wrong in the sense that JSON is the only data representation for REST. but it's right in the sense that it can be JSON.
 		
 	
 	\section*{4. WS-* services}
@@ -67,16 +71,22 @@
 		
 	\section*{5. Android Emulator Networking}
 		\subsection*{a)}
-			It is the IP address of the development machine. \\
-			It is always the same, because all web traffic is routed through the development machine. \\ 
+			Internally it's 10.0.2.15.\\
+			Externally it's the IP address of the development machine. \\
+			It is always the same, because all Internet traffic is routed through the development machine (by means of network address translation).\\ 
 			
 		\subsection*{b)}
-			It refers to itself (localhost). \\
+			It refers to itself (localhost).\\
 			
 		\subsection*{c)}
-			10.0.2.2 \\
+			10.0.2.2\\
 			
 		\subsection*{d)}
-			TODO \\
+			\begin{enumerate}
+				\item Connect by telnet to port 5554 on the development machine.
+				\item Authenticate using the auth command with the auth token given at the path provided by the shell.
+				\item Execute redir add tcp:[port on the emulated device]:[port on the development machine] .
+			\end{enumerate}
+			Now it's available under the chosen ports on the development machine.
 	
 \end{document}
